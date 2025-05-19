@@ -1,9 +1,12 @@
-import { Router } from 'express'
+import { Router } from "express";
+import { arch } from "os";
 
-const router = Router()
+const router = Router();
 
-router.get('/', (req, res) => {
-  res.json({ message: 'API funcionando!' })
-})
+router.get("/status", (req, res) => {
+  res.json({
+    Uptime: process.uptime(),
+  });
+});
 
-export default router
+export default router;
