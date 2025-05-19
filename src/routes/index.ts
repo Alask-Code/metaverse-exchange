@@ -1,5 +1,4 @@
 import { Router } from "express";
-import { arch } from "os";
 
 const router = Router();
 
